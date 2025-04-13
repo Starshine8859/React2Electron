@@ -1,0 +1,50 @@
+{
+  "name": "electron-react-mongo",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "cd client && npm run dev",
+    "electron": "electron .",
+    "build": "electron-packager ./ MyElectronApps --platform=win32 --arch=x64 --icon=front/favicon.ico --asar --out=dist --overwrite",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@ag-media/react-pdf-table": "^2.0.1",
+    "antd": "^5.24.4",
+    "axios": "^1.8.4",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "moment": "^2.30.1",
+    "nedb": "^1.8.0",
+    "react-router-dom": "^7.4.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "electron": "^35.0.3",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.glowsenior.invoiceapp",
+    "productName": "InvoiceManager",
+    "copyright": "© 2025 GlowSenior",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true
+    }
+  }
+}
